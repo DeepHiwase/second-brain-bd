@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import { Content, Link, User } from "./db";
@@ -11,6 +12,7 @@ import { random } from "./utils/random";
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/api/v1/signup", async (req, res) => {
   const { username, password } = req.body;

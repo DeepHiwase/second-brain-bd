@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
 
 export const User = mongoose.model("user", userSchema);
 
-const contentTypes = ["image", "video", "article", "audio"];
+const contentTypes = ["image", "video", "article", "audio", "youtube", "twitter"];
 
 const contentSchema = new mongoose.Schema({
   link: {
